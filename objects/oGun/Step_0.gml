@@ -23,7 +23,7 @@ else if (image_index = 1 && sprite_index == sPlayerGun3)
 	instance_create_layer(x, y, "Instances", oBlast);
 }
 
-if (oPlayer.key_shoot && alarm[1] <= -1)
+if (oPlayer.key_shoot && alarm[1] <= -1 && oPlayer.sprite_index != sPlayerDodge)
 {
 	alarm[0] = 4;
 	if (sprite_index = sPlayerGun1)

@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "sPlayer",
   "bbox_bottom": 46,
-  "bbox_left": 23,
+  "bbox_left": 22,
   "bbox_right": 42,
   "bbox_top": 20,
   "bboxMode": 2,

@@ -34,6 +34,7 @@
     {"name":"sPlayer","order":1,"path":"sprites/sPlayer/sPlayer.yy",},
     {"name":"sBulletCollision3","order":3,"path":"sprites/sBulletCollision3/sBulletCollision3.yy",},
     {"name":"sOriginalBulletCollision","order":6,"path":"sprites/sOriginalBulletCollision/sOriginalBulletCollision.yy",},
+    {"name":"sPlayerDodge","order":13,"path":"sprites/sPlayerDodge/sPlayerDodge.yy",},
     {"name":"oBlast","order":10,"path":"objects/oBlast/oBlast.yy",},
     {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
     {"name":"oBulletExplosion4","order":8,"path":"objects/oBulletExplosion4/oBulletExplosion4.yy",},

@@ -52,6 +52,7 @@
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":0,},
     {"id":{"name":"sBulletCollision3","path":"sprites/sBulletCollision3/sBulletCollision3.yy",},"order":0,},
     {"id":{"name":"sOriginalBulletCollision","path":"sprites/sOriginalBulletCollision/sOriginalBulletCollision.yy",},"order":0,},
+    {"id":{"name":"sPlayerDodge","path":"sprites/sPlayerDodge/sPlayerDodge.yy",},"order":0,},
     {"id":{"name":"oBlast","path":"objects/oBlast/oBlast.yy",},"order":0,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"sPlayerGun1","path":"sprites/sPlayerGun1/sPlayerGun1.yy",},"order":0,},

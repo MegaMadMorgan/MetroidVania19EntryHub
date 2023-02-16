@@ -1,4 +1,5 @@
 x+= projectileSpeed;
+y+= Verticality;
 
 if (place_meeting(x, y, oWall))
 {

@@ -16,7 +16,9 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"oCamera","order":2,"path":"objects/oCamera/oCamera.yy",},
     {"name":"sPlayer","order":1,"path":"sprites/sPlayer/sPlayer.yy",},
     {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
+    {"name":"sCamTest","order":2,"path":"sprites/sCamTest/sCamTest.yy",},
   ],
 }

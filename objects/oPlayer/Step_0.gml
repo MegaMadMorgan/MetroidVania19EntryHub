@@ -11,10 +11,10 @@ key_pause = keyboard_check(ord("P"));
 
 
 //weapon changing inputs
-key_1 = keyboard_check(vk_numpad1);
-key_2 = keyboard_check(vk_numpad2);
-key_3 = keyboard_check(vk_numpad3);
-key_4 = keyboard_check(vk_numpad4);
+key_1 = keyboard_check(ord("1"));
+key_2 = keyboard_check(ord("2"));
+key_3 = keyboard_check(ord("3"));
+key_4 = keyboard_check(ord("4"));
 
 //work out where to move horizontally
 if place_meeting(x, y+1, oWall)

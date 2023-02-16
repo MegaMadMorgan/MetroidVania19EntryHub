@@ -1,0 +1,1 @@
+image_xscale = oGun.image_xscale;

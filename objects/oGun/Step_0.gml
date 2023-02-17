@@ -23,7 +23,33 @@ else if (image_index = 1 && sprite_index == sPlayerGun3)
 	instance_create_layer(x, y, "Instances", oBlast);
 }
 
-if (oPlayer.key_shoot && alarm[1] <= -1 && oPlayer.sprite_index != sPlayerDodge)
+if (oPlayer.key_shoot && oPlayer.alarm[2] < 0 && oPlayer.meleeCounter > 0)
+{
+	visibleGun = true;
+}
+
+if (oPlayer.key_melee)
+{
+	visibleGun = false;	
+}
+
+//if (oPlayer.sprite_index == sPlayerDodge)
+//{
+//	visible = false;
+//}
+
+if ((oPlayer.meleeCounter <= 0 || visibleGun == true) && !(oPlayer.sprite_index == sPlayerDodge))
+{
+	visible = true;	
+}
+else
+{
+	visible = false;
+}
+
+
+
+if (oPlayer.key_shoot && alarm[1] <= -1 && oPlayer.sprite_index != sPlayerDodge && oPlayer.alarm[2] < 0)
 {
 	alarm[0] = 4;
 	if (sprite_index = sPlayerGun1)

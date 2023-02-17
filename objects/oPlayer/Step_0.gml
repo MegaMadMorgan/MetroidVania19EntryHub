@@ -3,7 +3,7 @@ key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_dodge = keyboard_check_pressed(vk_shift);
 key_jump = keyboard_check(ord("Z"));
-key_melee = keyboard_check(ord("X"));
+key_melee = keyboard_check_pressed(ord("X"));
 key_shoot = keyboard_check(ord("C"));
 key_grapple = keyboard_check(ord("S"));
 key_interact = keyboard_check(ord("E"));
@@ -17,7 +17,7 @@ key_3 = keyboard_check(ord("3"));
 key_4 = keyboard_check(ord("4"));
 
 //work out where to move horizontally
-if (place_meeting(x, y+1, oWall) && sprite_index != sPlayerDodge )
+if (place_meeting(x, y+1, oWall) && sprite_index = sPlayer && meleeCounter == 0)
 {
 	hsp = (key_right - key_left) * moveSpeed;
 }
@@ -78,4 +78,37 @@ if (alarm[0] = 0)
 {
 	sprite_index = sPlayer;
 	alarm[1] = 20;
+}
+
+// attacks
+
+if (key_melee && sprite_index != sPlayerDodge && meleeCounter <= 2)
+{
+	meleeCounter+=1;
+	image_index = 0;
+	alarm[2] = 6;
+	hsp = image_xscale * 2;
+}
+
+if (alarm[2] = 0 && (sprite_index == sPlayerAttack1 || sprite_index == sPlayerAttack2 || sprite_index == sPlayerAttack3))
+{
+	hsp = 0
+}
+
+if (meleeCounter == 1)
+{
+	sprite_index = sPlayerAttack1;
+	instance_create_layer(x,y,"Instances",oPlayerAttack1);	
+}
+
+if (meleeCounter == 2)
+{
+	sprite_index = sPlayerAttack2;
+	instance_create_layer(x,y,"Instances",oPlayerAttack2);
+}
+
+if (meleeCounter == 3)
+{
+	sprite_index = sPlayerAttack3;
+	instance_create_layer(x,y,"Instances",oPlayerAttack3);
 }

@@ -98,17 +98,59 @@ if (alarm[2] = 0 && (sprite_index == sPlayerAttack1 || sprite_index == sPlayerAt
 if (meleeCounter == 1)
 {
 	sprite_index = sPlayerAttack1;
-	instance_create_layer(x,y,"Instances",oPlayerAttack1);	
+	with (instance_create_layer(x,y,"Instances",oPlayerAttack1))	
+	{
+		image_xscale = other.image_xscale;
+		with (instance_place(x,y,oSandbag))
+		{
+			if (hit == 0)
+			{
+				hit = 1;
+				vsp = -2;
+				hsp = sign(x - other.x) * 2;
+				image_xscale = sign(hsp);
+				alarm[0] = 6;
+			}
+		}
+	}
 }
 
 if (meleeCounter == 2)
 {
 	sprite_index = sPlayerAttack2;
-	instance_create_layer(x,y,"Instances",oPlayerAttack2);
+	with (instance_create_layer(x,y,"Instances",oPlayerAttack2))	
+	{
+		image_xscale = other.image_xscale;
+		with (instance_place(x,y,oSandbag))
+		{
+			if (hit == 0)
+			{
+				hit = 1;
+				vsp = -2;
+				hsp = sign(x - other.x) * 3;
+				image_xscale = sign(hsp);
+				alarm[0] = 6;
+			}
+		}
+	}
 }
 
 if (meleeCounter == 3)
 {
 	sprite_index = sPlayerAttack3;
-	instance_create_layer(x,y,"Instances",oPlayerAttack3);
+	with (instance_create_layer(x,y,"Instances",oPlayerAttack3))	
+	{
+		image_xscale = other.image_xscale;
+		with (instance_place(x,y,oSandbag))
+		{
+			if (hit == 0)
+			{
+				hit = 1;
+				vsp = -5;
+				hsp = sign(x - other.x) * 6;
+				image_xscale = sign(hsp);
+				alarm[0] = 25;
+			}
+		}
+	}
 }

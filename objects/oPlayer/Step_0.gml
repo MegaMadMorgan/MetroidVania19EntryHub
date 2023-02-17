@@ -56,15 +56,26 @@ if ((key_right && hsp > 0 && place_meeting(x, y+1, oWall)) || (key_right && !pla
 //considering allowing the player to turn around whilst in the air, since they cannot control the character already. this allows for a jumping turn for shooting whilst fleeing as an advanced tactic!
 
 //dodge/slide
-if (key_dodge && !(key_left || key_right) && (canJump-- > 0) && alarm[0] <= -1)
+if (key_dodge && !(key_left || key_right) && (canJump-- > 0) && alarm[1] <= -1 && alarm[0] <= -1)
 {
 	sprite_index = sPlayerDodge;
 	hsp = 5 * image_xscale;	
-	alarm[0] = 45;
+	alarm[0] = 15;
 }
-else if (key_dodge && (key_left || key_right) && (canJump-- > 0) && alarm[0] <= -1)
+else if (key_dodge && (key_left || key_right) && (canJump-- > 0) && alarm[1] <= -1 && alarm[0] <= -1) // this obtuse way is done because of the jump turn trick
 {
 	sprite_index = sPlayerDodge;
 	hsp = (key_right - key_left) * 5	
-	alarm[0] = 45;
+	alarm[0] = 15;
+}
+
+if (alarm[0] >= 0 && sprite_index == sPlayerDodge && !place_empty(x, y-5, oWall))
+{
+	alarm[0] = 5;
+}
+
+if (alarm[0] = 0)
+{
+	sprite_index = sPlayer;
+	alarm[1] = 20;
 }

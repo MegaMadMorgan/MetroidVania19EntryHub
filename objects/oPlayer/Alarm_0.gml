@@ -1,1 +1,1 @@
-// dodge reset timer
+// dodge timer (there's no animation for now so its working off this...)

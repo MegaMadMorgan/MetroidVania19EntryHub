@@ -38,8 +38,10 @@
     {"name":"oBlast","order":10,"path":"objects/oBlast/oBlast.yy",},
     {"name":"oPlayer","order":1,"path":"objects/oPlayer/oPlayer.yy",},
     {"name":"oBulletExplosion4","order":8,"path":"objects/oBulletExplosion4/oBulletExplosion4.yy",},
+    {"name":"sWallhalf","order":14,"path":"sprites/sWallhalf/sWallhalf.yy",},
     {"name":"oGun","order":3,"path":"objects/oGun/oGun.yy",},
     {"name":"sCamTest","order":2,"path":"sprites/sCamTest/sCamTest.yy",},
+    {"name":"oHalfWall","order":11,"path":"objects/oHalfWall/oHalfWall.yy",},
     {"name":"sLaser","order":5,"path":"sprites/sLaser/sLaser.yy",},
   ],
 }

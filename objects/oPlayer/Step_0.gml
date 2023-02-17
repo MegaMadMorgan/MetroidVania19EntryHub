@@ -16,10 +16,12 @@ key_2 = keyboard_check(ord("2"));
 key_3 = keyboard_check(ord("3"));
 key_4 = keyboard_check(ord("4"));
 
+move_input = key_right - key_left;
+
 //work out where to move horizontally
 if (place_meeting(x, y+1, oWall) && sprite_index = sPlayer && meleeCounter == 0)
 {
-	hsp = (key_right - key_left) * moveSpeed;
+	hsp = move_input * moveSpeed;
 }
 
 //work out where to move vertically
@@ -53,6 +55,7 @@ if ((key_right && hsp > 0 && place_meeting(x, y+1, oWall)) || (key_right && !pla
 	image_xscale = 1;	
 }
 
+<<<<<<< Updated upstream
 //considering allowing the player to turn around whilst in the air, since they cannot control the character already. this allows for a jumping turn for shooting whilst fleeing as an advanced tactic!
 
 //dodge/slide
@@ -154,3 +157,9 @@ if (meleeCounter == 3)
 		}
 	}
 }
+=======
+if(move_input != 0) sprite_index = walk_sprite;
+else sprite_index = idle_sprite;
+
+//considering allowing the player to turn around whilst in the air, since they cannot control the character already. this allows for a jumping turn for shooting whilst fleeing as an advanced tactic!
+>>>>>>> Stashed changes

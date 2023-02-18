@@ -5,11 +5,13 @@ y = oPlayer.y;
 //face player's direction
 image_xscale = oPlayer.image_xscale;
 
+//resetting gun's animation
 if (alarm[0] <= -1)
 {
 	image_index = 0;
 }
 
+//projectile changing
 if (image_index = 1 && sprite_index != sPlayerGun4 && sprite_index != sPlayerGun3)
 {
 	instance_create_layer(x, y, "Instances", oBullet);
@@ -23,7 +25,29 @@ else if (image_index = 1 && sprite_index == sPlayerGun3)
 	instance_create_layer(x, y, "Instances", oBlast);
 }
 
-if (oPlayer.key_shoot && alarm[1] <= -1)
+//gun visibility
+if (oPlayer.key_shoot && oPlayer.alarm[2] < 0 && oPlayer.meleeCounter > 0)
+{
+	visibleGun = true;
+}
+
+if (oPlayer.key_melee)
+{
+	visibleGun = false;	
+}
+
+if ((oPlayer.meleeCounter <= 0 || visibleGun == true) && !(oPlayer.sprite_index == sPlayerDodge))
+{
+	visible = true;	
+}
+else
+{
+	visible = false;
+}
+
+
+//gun fire rates
+if (oPlayer.key_shoot && alarm[1] <= -1 && oPlayer.sprite_index != sPlayerDodge && oPlayer.alarm[2] < 0)
 {
 	alarm[0] = 4;
 	if (sprite_index = sPlayerGun1)
@@ -42,6 +66,7 @@ if (oPlayer.key_shoot && alarm[1] <= -1)
 
 
 //considered using case for this, may do another day, just want it to work thou
+//gun switching
 if (oPlayer.key_1)
 {
 	sprite_index = sPlayerGun1
